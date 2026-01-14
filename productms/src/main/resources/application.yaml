@@ -9,6 +9,14 @@ spring:
       value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
       acks: all
       properties:
+        enable:
+          idempotence: true
+        max:
+          in:
+            flight:
+              requests:
+                per:
+                  connection: 5
         delivery:
           timeout:
             ms: 120000
