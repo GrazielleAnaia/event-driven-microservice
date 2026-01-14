@@ -8,12 +8,11 @@ import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 
     KafkaTemplate<String, ProductCreatedEvent> kafkaTemplate;
 
@@ -22,23 +21,34 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public String createProduct(CreateProductRequest product) {
+    public String createProduct(CreateProductRequest product) throws Exception {
 
         String productId = UUID.randomUUID().toString();
 
         ProductCreatedEvent productCreatedEvent = new ProductCreatedEvent(productId,
                 product.getTitle(), product.getPrice(), product.getQuantity());
-        //Send message asynchronously
-        CompletableFuture<SendResult<String, ProductCreatedEvent>> future = kafkaTemplate.send("product-created-event-topic", productId, productCreatedEvent);
+        LOGGER.info("Before publishing a ProductCreatedEvent");
 
-        future.whenComplete((result, exception) -> {
-            if (exception != null) {
-                logger.error("Failed to send message: " + exception.getMessage());
-            } else {
-                logger.info("Message successfully sent with " + result.getRecordMetadata());
-            }
-        });
-        logger.info("****** Returning product ID");
+        //Send message synchronously
+        SendResult<String, ProductCreatedEvent> result = kafkaTemplate.send("product-created-event-topic",
+                productId, productCreatedEvent).get();
+
+//        future.whenComplete((result, exception) -> {
+//            if (exception != null) {
+//                LOGGER.error("Failed to send message: " + exception.getMessage());
+//            } else {
+//                LOGGER.info("Message successfully sent with " + result.getRecordMetadata());
+//            }
+//        });
+
+        //Send message synchronously
+//        future.join();
+
+        LOGGER.info("Partition: " + result.getRecordMetadata().partition());
+        LOGGER.info("Topic name: " + result.getRecordMetadata().topic());
+        LOGGER.info("Offset: " + result.getRecordMetadata().offset());
+
+        LOGGER.info("****** Returning product ID");
         return productId;
     }
 }

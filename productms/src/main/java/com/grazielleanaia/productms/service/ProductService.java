@@ -4,5 +4,5 @@ import com.grazielleanaia.productms.controller.CreateProductRequest;
 
 public interface ProductService {
 
-    String createProduct(CreateProductRequest product);
+    String createProduct(CreateProductRequest product) throws Exception;
 }

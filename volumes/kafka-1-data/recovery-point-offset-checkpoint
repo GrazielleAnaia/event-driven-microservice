@@ -1,5 +1,6 @@
 0
-53
+56
+insync-topic 0 0
 __consumer_offsets 13 0
 __consumer_offsets 46 0
 __consumer_offsets 9 0
@@ -30,6 +31,7 @@ __consumer_offsets 4 0
 __consumer_offsets 33 0
 __consumer_offsets 15 0
 __consumer_offsets 48 0
+insync-topic 2 0
 __consumer_offsets 11 0
 __consumer_offsets 44 0
 __consumer_offsets 23 0
@@ -42,6 +44,7 @@ __consumer_offsets 40 0
 __consumer_offsets 3 0
 __consumer_offsets 36 0
 __consumer_offsets 47 0
+insync-topic 1 0
 __consumer_offsets 14 0
 __consumer_offsets 43 0
 __consumer_offsets 10 0
