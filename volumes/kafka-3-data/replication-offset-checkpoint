@@ -6,7 +6,7 @@ __consumer_offsets 0 0
 __consumer_offsets 6 0
 __consumer_offsets 35 0
 __consumer_offsets 30 0
-__consumer_offsets 13 2
+__consumer_offsets 13 3
 __consumer_offsets 26 0
 __consumer_offsets 21 0
 product-created-event-topic 1 2
@@ -42,7 +42,7 @@ __consumer_offsets 48 0
 __consumer_offsets 22 0
 insync-topic 2 0
 __consumer_offsets 46 4
-product-created-event-topic 2 2
+product-created-event-topic 2 3
 __consumer_offsets 42 0
 __consumer_offsets 28 0
 insync-topic 1 0
