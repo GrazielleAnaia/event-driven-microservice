@@ -1,5 +1,6 @@
 package com.grazielleanaia.productms.service;
 
+import com.grazielleanaia.core.ProductCreatedEvent;
 import com.grazielleanaia.productms.controller.CreateProductRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.grazielleanaia.productms.service;
+package com.grazielleanaia.core;
 
 
 import java.math.BigDecimal;
