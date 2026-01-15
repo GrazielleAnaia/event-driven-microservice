@@ -1,7 +1,7 @@
 package com.grazielleanaia.productms;
 
 
-import com.grazielleanaia.productms.service.ProductCreatedEvent;
+import com.grazielleanaia.core.ProductCreatedEvent;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.springframework.beans.factory.annotation.Value;

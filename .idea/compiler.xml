@@ -6,12 +6,16 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core" />
         <module name="productms" />
+        <module name="emailnotification" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="core" options="-parameters" />
+      <module name="emailnotification" options="-parameters" />
       <module name="productms" options="-parameters" />
     </option>
   </component>
