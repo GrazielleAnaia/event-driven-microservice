@@ -1,5 +1,5 @@
 0
-56
+57
 insync-topic 0 0
 __consumer_offsets 13 3
 __consumer_offsets 46 4
@@ -53,6 +53,7 @@ __consumer_offsets 18 0
 __consumer_offsets 31 0
 __consumer_offsets 27 0
 __consumer_offsets 39 0
+product-created-event-topic.DLT 0 0
 __consumer_offsets 6 0
 __consumer_offsets 35 0
 __consumer_offsets 2 0
