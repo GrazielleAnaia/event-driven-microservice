@@ -9,6 +9,7 @@
         <module name="core" />
         <module name="productms" />
         <module name="emailnotification" />
+        <module name="mockservice" />
       </profile>
     </annotationProcessing>
   </component>
@@ -16,6 +17,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="core" options="-parameters" />
       <module name="emailnotification" options="-parameters" />
+      <module name="mockservice" options="-parameters" />
       <module name="productms" options="-parameters" />
     </option>
   </component>
