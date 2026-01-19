@@ -7,7 +7,7 @@ spring:
       bootstrap-servers: localhost:9092,localhost:9094
 #      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 #      value-deserializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
-      group-id: product-created-events
+      group-id: product-created-event-group
       properties:
         spring:
           json:
