@@ -31,8 +31,8 @@ public class ProductCreatedEventHandler {
     //Handle specific message types
     @KafkaHandler
     public void handle(ProductCreatedEvent productCreatedEvent) {
-//        if (true) throw new NotRetryableException("Error occurred. No need to consume message again.");
-        LOGGER.info("Received a new event: " + productCreatedEvent.getTitle());
+        LOGGER.info("Received a new event: " + productCreatedEvent.getTitle() +
+                " with productID: " + productCreatedEvent.getProductId());
         String requestUrl = "http://localhost:8083/response/200";
 
         try {
