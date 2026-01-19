@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: mockservice
+
+
+server:
+  port: 8083
