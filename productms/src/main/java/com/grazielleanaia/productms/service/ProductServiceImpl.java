@@ -2,6 +2,7 @@ package com.grazielleanaia.productms.service;
 
 import com.grazielleanaia.core.ProductCreatedEvent;
 import com.grazielleanaia.productms.controller.CreateProductRequest;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -30,25 +31,17 @@ public class ProductServiceImpl implements ProductService {
                 product.getTitle(), product.getPrice(), product.getQuantity());
         LOGGER.info("Before publishing a ProductCreatedEvent");
 
-        //Send message synchronously
-        SendResult<String, ProductCreatedEvent> result = kafkaTemplate.send("product-created-event-topic",
-                productId, productCreatedEvent).get();
-
-//        future.whenComplete((result, exception) -> {
-//            if (exception != null) {
-//                LOGGER.error("Failed to send message: " + exception.getMessage());
-//            } else {
-//                LOGGER.info("Message successfully sent with " + result.getRecordMetadata());
-//            }
-//        });
+        ProducerRecord<String, ProductCreatedEvent> record = new ProducerRecord<>("product-created-event-topic", productId,
+                productCreatedEvent);
+        record.headers().add("messageID", UUID.randomUUID().toString().getBytes());
+//        record.headers().add("messageID", "123456".getBytes());
 
         //Send message synchronously
-//        future.join();
+        SendResult<String, ProductCreatedEvent> result = kafkaTemplate.send(record).get();
 
         LOGGER.info("Partition: " + result.getRecordMetadata().partition());
         LOGGER.info("Topic name: " + result.getRecordMetadata().topic());
         LOGGER.info("Offset: " + result.getRecordMetadata().offset());
-
         LOGGER.info("****** Returning product ID");
         return productId;
     }

@@ -7,11 +7,11 @@ __consumer_offsets 6 0
 __consumer_offsets 35 0
 __consumer_offsets 30 0
 __consumer_offsets 13 4
-__consumer_offsets 26 46
+__consumer_offsets 26 47
 __consumer_offsets 21 0
-product-created-event-topic 1 10
+product-created-event-topic 1 11
 __consumer_offsets 19 4
-__consumer_offsets 25 15
+__consumer_offsets 25 31
 __consumer_offsets 33 4
 __consumer_offsets 41 4
 __consumer_offsets 37 0
@@ -32,7 +32,7 @@ __consumer_offsets 36 0
 __consumer_offsets 45 0
 __consumer_offsets 16 0
 __consumer_offsets 10 0
-product-created-event-topic 0 4
+product-created-event-topic 0 7
 __consumer_offsets 11 0
 __consumer_offsets 20 4
 __consumer_offsets 47 0
@@ -42,7 +42,7 @@ __consumer_offsets 48 0
 __consumer_offsets 22 0
 insync-topic 2 0
 __consumer_offsets 46 4
-product-created-event-topic 2 12
+product-created-event-topic 2 13
 __consumer_offsets 42 0
 __consumer_offsets 28 0
 insync-topic 1 0
