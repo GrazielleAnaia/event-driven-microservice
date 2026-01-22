@@ -21,7 +21,7 @@ spring:
         spring:
           json:
             trusted:
-              packages: com.grazielleanaia.core
+              packages: com.grazielleanaia.core.*
 
 server:
   port: 8081

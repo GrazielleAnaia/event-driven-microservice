@@ -8,6 +8,9 @@
         <option value="$PROJECT_DIR$/emailnotification/pom.xml" />
         <option value="$PROJECT_DIR$/core/pom.xml" />
         <option value="$PROJECT_DIR$/mockservice/pom.xml" />
+        <option value="$PROJECT_DIR$/depositms/pom.xml" />
+        <option value="$PROJECT_DIR$/transferms/pom.xml" />
+        <option value="$PROJECT_DIR$/withdrawalms/pom.xml" />
       </list>
     </option>
   </component>

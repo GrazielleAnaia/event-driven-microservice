@@ -1,0 +1,63 @@
+spring:
+  application:
+    name: transferms
+
+  datasource:
+    username: user
+    password:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+  kafka:
+    producer:
+      transaction-id-prefix: transfer-service-${random.value}-
+      bootstrap-servers: localhost:9092,localhost:9094
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
+      acks: all
+      properties:
+        enable:
+          idempotence: true
+        max:
+          in:
+            flight:
+              requests:
+                per:
+                  connection: 5
+        delivery:
+          timeout:
+            ms: 120000
+        linger:
+          ms: 0
+        request:
+          timeout:
+            ms: 30000
+
+withdraw-money-topic: withdraw-money-topic
+deposit-money-topic: deposit-money-topic
+
+logging:
+  level:
+    org:
+      apache:
+        kafka:
+          clients:
+            producer:
+              internals:
+                TransactionManager: DEBUG
+      springframework:
+        orm:
+          jpa:
+            JpaTransactionManager: DEBUG
+        kafka:
+          transaction:
+          KafkaTransactionManager: DEBUG
+        transaction: DEBUG
+
+
+server:
+  port: 8084
