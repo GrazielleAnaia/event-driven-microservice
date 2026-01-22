@@ -45,7 +45,7 @@ public class ProductCreatedEventHandler {
                        @Header(KafkaHeaders.RECEIVED_KEY) String messageKey) {
         LOGGER.info("Received a new event: " + productCreatedEvent.getTitle() +
                 " with productID: " + productCreatedEvent.getProductId());
-        String requestUrl = "http://localhost:8083/response/200";
+        String requestUrl = "http://localhost:8082/response/200";
 
         ProcessedEventEntity existingRecord = repository.findByMessageID(messageID);
 

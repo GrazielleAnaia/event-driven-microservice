@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: withdrawalms
+
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: amount-withdrawal-event-group
+      isolation-level: READ_COMMITTED
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.grazielleanaia.core.*
+
+server:
+  port: 8085

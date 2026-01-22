@@ -1,0 +1,13 @@
+package com.grazielleanaia.depositms;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class DepositmsApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

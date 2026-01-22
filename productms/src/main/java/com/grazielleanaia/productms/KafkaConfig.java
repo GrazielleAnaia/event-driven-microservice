@@ -78,6 +78,4 @@ public class KafkaConfig {
     KafkaTemplate<String, ProductCreatedEvent> kafkaTemplate() {
         return new KafkaTemplate<String, ProductCreatedEvent>(producerFactory());
     }
-
-
 }
