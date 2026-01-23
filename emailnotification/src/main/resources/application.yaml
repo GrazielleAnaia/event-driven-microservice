@@ -17,6 +17,7 @@ spring:
 #      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
 #      value-deserializer: org.springframework.kafka.support.serializer.JacksonJsonSerializer
       group-id: product-created-event-group
+      auto-offset-reset: earliest
       properties:
         spring:
           json:
