@@ -29,8 +29,8 @@ import org.springframework.web.client.RestTemplate;
 public class ProductCreatedEventHandler {
 
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
-    private RestTemplate restTemplate;
-    private ProcessedEventRepository repository;
+    private final RestTemplate restTemplate;
+    private final ProcessedEventRepository repository;
 
     public ProductCreatedEventHandler(RestTemplate restTemplate, ProcessedEventRepository repository) {
         this.restTemplate = restTemplate;
@@ -50,7 +50,7 @@ public class ProductCreatedEventHandler {
         ProcessedEventEntity existingRecord = repository.findByMessageID(messageID);
 
         if (existingRecord != null) {
-            LOGGER.info("Found a duplicated ID: {}", existingRecord.getMessageID());
+            LOGGER.info("Found duplicated message ID: {}", existingRecord.getMessageID());
             return;
         }
 

@@ -34,7 +34,6 @@ public class ProductServiceImpl implements ProductService {
         ProducerRecord<String, ProductCreatedEvent> record = new ProducerRecord<>("product-created-event-topic", productId,
                 productCreatedEvent);
         record.headers().add("messageID", UUID.randomUUID().toString().getBytes());
-//        record.headers().add("messageID", "123456".getBytes());
 
         //Send message synchronously
         SendResult<String, ProductCreatedEvent> result = kafkaTemplate.send(record).get();
