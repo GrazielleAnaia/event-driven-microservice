@@ -7,7 +7,7 @@ __consumer_offsets 32 0
 __transaction_state 30 0
 product-created-event-topic 1 11
 __transaction_state 32 0
-__consumer_offsets 25 48
+__consumer_offsets 25 50
 __consumer_offsets 41 4
 __transaction_state 34 8
 __transaction_state 49 0
@@ -41,7 +41,7 @@ insync-topic 2 0
 __consumer_offsets 23 0
 __transaction_state 44 0
 __transaction_state 25 0
-__consumer_offsets 42 24
+__consumer_offsets 42 26
 __transaction_state 28 0
 __consumer_offsets 28 0
 __consumer_offsets 4 0
@@ -61,11 +61,11 @@ __consumer_offsets 0 0
 __consumer_offsets 35 0
 __transaction_state 18 0
 __consumer_offsets 13 4
-__consumer_offsets 26 47
+__consumer_offsets 26 51
 __consumer_offsets 21 0
 __transaction_state 31 0
 __consumer_offsets 19 4
-__consumer_offsets 33 24
+__consumer_offsets 33 26
 __transaction_state 29 0
 __consumer_offsets 37 0
 __transaction_state 5 0

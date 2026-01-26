@@ -6,7 +6,7 @@ __consumer_offsets 46 4
 __transaction_state 17 0
 __transaction_state 34 0
 __consumer_offsets 21 0
-product-created-event-topic 2 3
+product-created-event-topic 2 13
 __transaction_state 9 0
 __transaction_state 26 0
 __consumer_offsets 30 0
@@ -34,7 +34,7 @@ __consumer_offsets 48 0
 __transaction_state 15 0
 __transaction_state 48 0
 __consumer_offsets 23 0
-product-created-event-topic 0 0
+product-created-event-topic 0 7
 __transaction_state 7 0
 __transaction_state 40 0
 __consumer_offsets 32 0
@@ -65,7 +65,7 @@ __transaction_state 5 0
 __transaction_state 38 0
 __consumer_offsets 17 0
 __transaction_state 30 0
-__consumer_offsets 26 0
+__consumer_offsets 26 47
 __transaction_state 22 0
 __consumer_offsets 1 0
 __consumer_offsets 34 0
@@ -79,10 +79,10 @@ __transaction_state 37 0
 __consumer_offsets 49 0
 __consumer_offsets 0 0
 __transaction_state 29 0
-__consumer_offsets 25 0
+__consumer_offsets 25 48
 __consumer_offsets 8 0
 __transaction_state 21 0
-__consumer_offsets 33 0
+__consumer_offsets 33 24
 __transaction_state 11 0
 withdraw-money-topic 1 0
 __transaction_state 44 0
