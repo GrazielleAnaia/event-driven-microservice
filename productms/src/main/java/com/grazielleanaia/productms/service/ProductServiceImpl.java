@@ -41,6 +41,11 @@ public class ProductServiceImpl implements ProductService {
         LOGGER.info("Partition: " + result.getRecordMetadata().partition());
         LOGGER.info("Topic name: " + result.getRecordMetadata().topic());
         LOGGER.info("Offset: " + result.getRecordMetadata().offset());
+        LOGGER.info("Has offset: " + result.getRecordMetadata().hasOffset());
+        LOGGER.info("Serialized key size: " + result.getRecordMetadata().serializedKeySize());
+        LOGGER.info("Serialized value size: " + result.getRecordMetadata().serializedValueSize());
+        LOGGER.info("Timestamp: " + result.getRecordMetadata().timestamp());
+
         LOGGER.info("****** Returning product ID");
         return productId;
     }
