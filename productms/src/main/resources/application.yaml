@@ -19,17 +19,17 @@ spring:
                   connection: 5
         delivery:
           timeout:
-            ms: 120000
+            ms: 120000 #total amount Kafka will try to deliver a message before failing permanently
         linger:
-          ms: 0
+          ms: 0 #sends immediately, no batching delay
         request:
           timeout:
             ms: 30000
-#      retries: 10
+#      retries: 10 #how many times producer will retry sending a message if it fails
 #      properties:
 #        retry:
 #          backoff:
-#            ms: 1000
+#            ms: 1000 #how long producer waits between retry attempts
 
 
 
